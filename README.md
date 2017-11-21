@@ -34,8 +34,18 @@ The template has the following structure
 
 3 directories, 10 files
 ```
-The source files (`*.c` and `*.asm`) are located in the `src` folder. Header files (`*.h`) are located in the `lib` folder. The compilation outputs (binary files [`*.hex`, `*.elf`], code disassembler [`*.lss`], dependency files [`*.list`], batch files [`*.o`,]) and secondary `Makefile` are located in the `bin` folder.
+The source files (`*.c` and `*.asm`) are located in the `src/` folder. Header files `*.h` are located in the `lib/` folder. The compilation outputs (binary files `*.hex`, `*.elf`, code disassembler `*.lss`, dependency files `*.list`, batch files `*.o`) and secondary `Makefile` are located in the `bin/` folder.
 
+### Change of frequency
+The F_CPU [Hz] constant used for delay functions is defined in the `settings.h` file. To change it old, edit this file and include it in the main file.
+
+```C
+#ifndef F_CPU
+  #define F_CPU 16000000UL // Hz
+#endif
+```
+
+## Use
 ```bash
 # compiling the project, equivalen to make
 make all

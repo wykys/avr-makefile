@@ -68,11 +68,11 @@ The `F_CPU` [Hz] constant used for delay functions is defined in the `settings.h
 ### Microprocessor change
 Changing the microcontroller requires changing the `CHIP` variable in the` Makefile` file and the `MCU` variable in the `bin/ Makefile` file.
 
-The `CHIP` variable is a parameter for` avrdude` and may contain the following values: http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
+The `CHIP` variable is a parameter for `avrdude` and may contain the following values: http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
 
 The `MCU` variable is a parameter for `avr-gcc` and may contain the following values: https://gcc.gnu.org/onlinedocs/gcc/AVR-Options.html
 
-For example, if I wanted to use the ATmega16 arduino nano, which is equipped with the ATmega328P chip, I would make the following modifications:
+For example, if I wanted ATmega328P (which is for example in arduino nano), I would make the following modifications:
 ```Makefile
 # in Makefile
 CHIP = m328p

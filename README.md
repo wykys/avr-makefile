@@ -1,5 +1,5 @@
 # AVR Makefile
-Support for projects based on AVR microcontrollers.  
+Support for projects based on AVR microcontrollers. Makefile automatically finds source files and detects their dependencies. Which is a great companion to life.
 
 ## Installation on GNU/Linux
 ```bash

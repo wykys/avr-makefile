@@ -35,7 +35,7 @@ make chip_test
 ```
 
 ## Application notes
-The template has the following structure
+### File Template Hierarchy
 ```bash
 .
 ├── bin
@@ -55,6 +55,7 @@ The template has the following structure
 3 directories, 10 files
 ```
 The source files (`*.c` and `*.asm`) are located in the `src/` folder. Header files `*.h` are located in the `lib/` folder. The compilation outputs (binary files `*.hex`, `*.elf`, code disassembler `*.lss`, dependency files `*.list`, batch files `*.o`) and secondary `Makefile` are located in the `bin/` folder.
+
 
 ### Change of frequency
 The `F_CPU` [Hz] constant used for delay functions is defined in the `settings.h` file. The `settings.h` file must be plugged into all the files in which you want to use the constant. You can also add additional constants that affect the behavior of the entire program.
@@ -78,4 +79,12 @@ For example, if I wanted ATmega328P (which is for example in arduino nano), I wo
 CHIP = m328p
 # in bin/Makefile
 MCU = atmega328p
+```
+
+### Programmer change
+Changing the programmer will required change the value of `PROG` in` Makefile`. Possible parameters of the value that are passed to 'avrdude' as `-c` are listed here: http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
+
+For example, if I wanted to use the arduino bootloader to flash the program, I would proceed as follows:
+```Makefile
+PROG = arduino
 ```

@@ -86,5 +86,6 @@ Changing the programmer will required change the value of `PROG` in` Makefile`. 
 
 For example, if I wanted to use the arduino bootloader to flash the program, I would proceed as follows:
 ```Makefile
+# in Makefile
 PROG = arduino
 ```

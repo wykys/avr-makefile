@@ -37,7 +37,7 @@ The template has the following structure
 The source files (`*.c` and `*.asm`) are located in the `src/` folder. Header files `*.h` are located in the `lib/` folder. The compilation outputs (binary files `*.hex`, `*.elf`, code disassembler `*.lss`, dependency files `*.list`, batch files `*.o`) and secondary `Makefile` are located in the `bin/` folder.
 
 ### Change of frequency
-The F_CPU [Hz] constant used for delay functions is defined in the `settings.h` file. To change it old, edit this file and include it in the main file.
+The `F_CPU` [Hz] constant used for delay functions is defined in the `settings.h` file. The `settings.h` file must be plugged into all the files in which you want to use the constant. You can also add additional constants that affect the behavior of the entire program.
 
 ```C
 #ifndef F_CPU

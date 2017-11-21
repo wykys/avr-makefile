@@ -82,7 +82,7 @@ MCU = atmega328p
 ```
 
 ### Programmer change
-Changing the programmer will required change the value of `PROG` in` Makefile`. Possible parameters of the value that are passed to 'avrdude' as `-c` are listed here: http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
+Changing the programmer will required change the value of `PROG` in` Makefile`. Possible parameters of the value that are passed to `avrdude` as `-c` are listed here: http://www.nongnu.org/avrdude/user-manual/avrdude_4.html
 
 For example, if I wanted to use the arduino bootloader to flash the program, I would proceed as follows:
 ```Makefile

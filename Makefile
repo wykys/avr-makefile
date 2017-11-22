@@ -23,9 +23,6 @@ all:
 clean:
 	@make --no-print-directory -C $(BIN) $@
 
-fuses:
-	$(AVRDUDE) -U lfuse:w:0x2b:m -U hfuse:w:0xff:m
-
 terminal:
 	$(AVRDUDE) -t
 
@@ -36,7 +33,7 @@ flash:
 	$(AVRDUDE) -U flash:w:$(ELF):e
 
 flash_all:
-	$(AVRDUDE) -U lfuse:w:$(ELF):e -U hfuse:w:$(ELF):e -U flash:w:$(ELF):e -U eeprom:w:$(ELF):e
+	$(AVRDUDE) -U flash:w:$(ELF):e -U eeprom:w:$(ELF):e
 
 chip_test:
 	$(AVRDUDE)

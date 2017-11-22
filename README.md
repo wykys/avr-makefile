@@ -22,13 +22,11 @@ make all
 make flash
 # deletes the compilation outputs
 make clean
-# flash fuses, unsafe, attentive to the right fuses
-make fuses
 # start avrdude terminal
 make terminal
 # EEPROM dump_eeprom
 make dump_eeprom
-# flash all (flash, EEPROM fuses), unsafe, attentive to the right fuses
+# flash all (flash, EEPROM)
 make flash_all
 # chip testing
 make chip_test

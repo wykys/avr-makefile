@@ -18,7 +18,7 @@ RM = rm -rf
 DEP = dependence.list
 
 OBJFILES = $(shell find $(SRC) -name '*.c' -printf '%f ' | sed -e 's/\.c/\.o/g')
-OBJFILES += $(shell find $(SRC) -name '*.asm' -printf '%f ' | sed -e 's/\.asm/\.o/g')
+OBJFILES += $(shell find $(SRC) -name '*.S' -printf '%f ' | sed -e 's/\.S/\.o/g')
 
 .PHONY: dependence clean $(NAME)
 
@@ -35,7 +35,7 @@ $(DEP): $(SRC)*.c
 # create object modules
 %.o : $(SRC)%.c
 	$(CC) -c $(CFLAGS) $< -o $@
-%.o: $(SRC)%.asm
+%.o: $(SRC)%.S
 	$(CC) -c $(AFLAGS) $< -o $@
 
 # create ELF

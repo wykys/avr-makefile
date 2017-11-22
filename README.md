@@ -45,14 +45,14 @@ make chip_test
 ├── Makefile
 ├── README.md
 └── src
-    ├── asmFuncs.asm
+    ├── asmFuncs.S
     ├── main.c
-    ├── rand.asm
+    ├── rand.S
     └── uart.c
 
 3 directories, 10 files
 ```
-The source files `*.c` and `*.asm` are located in the `src/` folder. Header files `*.h` are located in the `lib/` folder. The compilation outputs (binary files `*.hex`, `*.elf`, code disassembler `*.lss`, dependency files `*.list`, batch files `*.o`) and secondary `Makefile` are located in the `bin/` folder.
+The source files `*.c` and `*.S` are located in the `src/` folder. Header files `*.h` are located in the `lib/` folder. The compilation outputs (binary files `*.hex`, `*.elf`, code disassembler `*.lss`, dependency files `*.list`, batch files `*.o`) and secondary `Makefile` are located in the `bin/` folder.
 
 
 ### Change of frequency

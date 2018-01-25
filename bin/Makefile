@@ -1,10 +1,13 @@
 # wykys Makefile for AVR
 
+ifndef NAME
 NAME = PRJ
-MCU = atmega16
+endif
 
 SRC = ../src/
-LIB = ../lib/
+LIB = ../inc/
+
+MCU = atmega16
 
 CC=avr-gcc -fdiagnostics-color=always
 CFLAGS = -mmcu=$(MCU) -Wall -std=c99 -O1 -I $(LIB)

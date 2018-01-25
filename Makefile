@@ -1,8 +1,10 @@
 # Main AVR project Makefile
 # wykys 9.9.2017
 
-BIN = bin
 NAME = PRJ
+export
+
+BIN = bin
 CHIP = m16
 PROG = avrisp2
 ELF = $(BIN)/$(NAME).elf
